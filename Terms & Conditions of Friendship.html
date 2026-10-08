@@ -1,0 +1,572 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Terms &amp; Conditions of Friendship</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Reenie+Beanie&display=swap">
+<style>
+/*
+  LAYOUT: one sheet of paper on a slightly darker desk. Each clause hangs its
+  label ("§ 01 — REPLYING") in a left column, with the text on the right.
+  The acceptance block at the bottom is a double-ruled form: checkbox,
+  signature line, status line, button. One deliberate paper look, so there is
+  no dark theme: every color is set explicitly below.
+*/
+:root {
+  --desk: #e5e5de;
+  --paper: #f8f8f3;
+  --paper-back: #eeeee7;
+  --ink: #141413;
+  --ink-soft: #5a5a54;
+  --rule-soft: rgba(20, 20, 19, 0.32);
+  --blue: #25349c; /* ballpoint pen: notes, ticks, signature, stamp */
+
+  --serif: "Libre Caslon Text", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --mono: "Courier Prime", "Courier New", Courier, monospace;
+  --hand: "Reenie Beanie", "Segoe Print", "Bradley Hand", cursive;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+  padding-block: clamp(1.25rem, 5vw, 4rem);
+  background: var(--desk);
+  color: var(--ink);
+  font: 400 1.0625rem/1.55 var(--serif);
+  overflow-x: clip;
+}
+
+::selection { background: var(--ink); color: var(--paper); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.defs { position: absolute; width: 0; height: 0; }
+
+/* ---------- The paper ---------- */
+.wrap { position: relative; max-width: 52rem; margin-inline: auto; }
+
+/* a second sheet peeking out from underneath, slightly crooked */
+.wrap::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: var(--paper-back);
+  border: 1px solid var(--rule-soft);
+  transform: rotate(0.7deg) translate(7px, 6px);
+}
+
+.sheet {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid rgba(20, 20, 19, 0.6);
+  padding: clamp(1.5rem, 5.5vw, 3.75rem);
+  padding-left: clamp(1.5rem, 7vw, 5.25rem);
+}
+
+/* paper grain */
+.sheet::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .18 0 0 0 0 .15 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* letter-fold creases */
+.fold {
+  position: absolute; left: 0; right: 0; height: 1px;
+  background: rgba(20, 20, 19, 0.09);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+.fold-1 { top: 33.333%; }
+.fold-2 { top: 66.666%; }
+
+/* punch holes */
+.hole {
+  position: absolute; left: 1.35rem;
+  width: 1rem; height: 1rem; border-radius: 50%;
+  background: var(--desk);
+  border: 1px solid var(--rule-soft);
+  box-shadow: inset 1px 2px 0 rgba(20, 20, 19, 0.18);
+}
+.hole-1 { top: 15%; }
+.hole-2 { top: 85%; }
+
+/* ---------- Header ---------- */
+.head { border-top: 4px double var(--ink); padding-top: 1.4rem; }
+
+h1 {
+  margin: 0 0 1.6rem;
+  font: 700 clamp(1.85rem, 6.3vw, 3.4rem)/1.04 var(--serif);
+  letter-spacing: 0.012em;
+  text-wrap: balance;
+}
+h1 .amp { font-style: italic; font-weight: 400; }
+h1 .tm {
+  position: relative; top: 0.35em; margin-left: 0.12em;
+  font-size: 0.32em; font-weight: 400; letter-spacing: 0; vertical-align: top;
+}
+
+.meta {
+  display: grid; grid-template-columns: 1fr 1fr;
+  margin: 0; border: 1px solid var(--ink);
+}
+.meta > div { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.6rem 0.85rem 0.7rem; }
+.meta > div + div { border-left: 1px solid var(--ink); }
+.meta dt {
+  font: 400 0.68rem/1.2 var(--mono);
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft);
+}
+.meta dd { margin: 0; font: 700 0.95rem/1.3 var(--mono); letter-spacing: 0.04em; }
+
+.notice {
+  margin: 2rem 0 0; padding: 1rem 0;
+  border-block: 1px solid var(--ink);
+  font: 700 0.86rem/1.6 var(--mono); letter-spacing: 0.06em;
+}
+.ul { position: relative; display: inline-block; }
+.ul svg {
+  position: absolute; left: -2%; bottom: -0.42em;
+  width: 104%; height: 0.55em; overflow: visible;
+  fill: none; stroke: var(--blue); stroke-width: 2; stroke-linecap: round;
+}
+.ul path { stroke-dasharray: 1; animation: draw 0.7s 1s ease-out backwards; }
+
+/* ---------- Clauses ---------- */
+.clause {
+  display: grid; grid-template-columns: 11.5rem 1fr;
+  gap: 0.5rem 2rem;
+  padding: 1.5rem 0 1.6rem;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.clause h2 {
+  margin: 0.4rem 0 0;
+  font: 700 0.8rem/1.5 var(--mono); letter-spacing: 0.09em;
+}
+.clause h2 .n { font-weight: 400; color: var(--ink-soft); transition: color 0.2s; }
+.clause:hover h2 .n { color: var(--blue); }
+.clause p { margin: 0; font-size: 1.2rem; line-height: 1.5; text-wrap: pretty; }
+
+.note {
+  display: block; width: fit-content;
+  margin-top: 0.35rem;
+  font: 400 1.7rem/1 var(--hand);
+  color: var(--blue);
+  transform: rotate(-2.5deg) translateX(0.4rem);
+}
+
+/* ---------- Acceptance form ---------- */
+.accept {
+  position: relative;
+  margin-top: 3.25rem;
+  padding: 2rem 2rem 1.75rem;
+  border: 1px solid var(--ink);
+}
+.accept::before {
+  content: ""; position: absolute; inset: 4px;
+  border: 1px solid var(--ink); pointer-events: none;
+}
+
+.hand-note {
+  position: absolute; top: -1.7rem; left: 1.25rem; margin: 0;
+  font: 400 1.6rem/1 var(--hand); color: var(--blue);
+  transform: rotate(-2deg);
+  transition: opacity 0.3s;
+}
+.is-accepted .hand-note { opacity: 0; }
+
+.stamp {
+  position: absolute; z-index: 2; top: -2.8rem; right: 1.25rem;
+  display: grid; justify-items: center; gap: 0.05rem;
+  padding: 0.35rem 0.9rem 0.4rem;
+  border: 3px double var(--blue);
+  color: var(--blue);
+  font-family: var(--mono); font-weight: 700; line-height: 1.1;
+  letter-spacing: 0.14em;
+  opacity: 0; transform: rotate(-8deg);
+  mix-blend-mode: multiply; filter: url(#ink);
+  pointer-events: none;
+}
+.stamp .s-small { font-size: 0.62rem; letter-spacing: 0.18em; }
+.stamp .s-main { font-size: 1.7rem; }
+.is-accepted .stamp { animation: slam 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1) both; }
+
+/* checkbox */
+.agree {
+  position: relative; display: flex; align-items: center; gap: 1.1rem;
+  padding-bottom: 1.4rem; border-bottom: 1px solid var(--rule-soft);
+  cursor: pointer;
+}
+.agree input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.box {
+  position: relative; flex: none;
+  width: 2.1rem; height: 2.1rem;
+  border: 1.5px solid var(--ink); background: var(--paper);
+}
+.box svg {
+  position: absolute; left: -0.25rem; top: -0.55rem;
+  width: 2.8rem; height: 2.5rem; overflow: visible;
+  fill: none; stroke: var(--blue); stroke-width: 3.2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.box path {
+  stroke-dasharray: 1; stroke-dashoffset: 1.02; opacity: 0;
+  transition: stroke-dashoffset 0.42s cubic-bezier(0.6, 0, 0.2, 1), opacity 0.01s;
+}
+.agree input:checked + .box { animation: pop 0.3s ease; }
+.agree input:checked + .box path { stroke-dashoffset: 0; opacity: 1; }
+.agree input:focus-visible + .box { outline: 2px solid var(--blue); outline-offset: 3px; }
+.agree-text { font: 700 1.1rem/1.3 var(--serif); letter-spacing: 0.05em; text-wrap: balance; }
+
+/* signature line */
+.sign {
+  display: grid; grid-template-columns: 1fr 9.5rem; column-gap: 1.5rem;
+  padding-top: 1.6rem;
+}
+.sig, .sig-date { position: relative; height: 3.1rem; border-bottom: 1px solid var(--ink); }
+.sig .x {
+  position: absolute; left: 0; bottom: 0.25rem;
+  font: 700 1rem/1 var(--mono); color: var(--ink-soft);
+}
+.sig svg {
+  position: absolute; left: 1.6rem; bottom: 0.15rem;
+  width: min(14rem, 72%); height: 3rem; overflow: visible;
+  fill: none; stroke: var(--blue); stroke-width: 2.2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.sig path { stroke-dasharray: 1; stroke-dashoffset: 1.02; opacity: 0; }
+.is-accepted .sig path {
+  stroke-dashoffset: 0; opacity: 1;
+  transition: stroke-dashoffset 1s cubic-bezier(0.5, 0, 0.3, 1) 0.35s, opacity 0.01s 0.35s;
+}
+.sig-date .val {
+  position: absolute; left: 0.2rem; bottom: 0.3rem;
+  font: 400 0.88rem/1 var(--mono); color: var(--blue);
+  opacity: 0; transition: opacity 0.4s;
+}
+.is-accepted .sig-date .val { opacity: 1; transition-delay: 0.9s; }
+.cap {
+  padding-top: 0.35rem;
+  font: 400 0.66rem/1.2 var(--mono);
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft);
+}
+
+/* status + button */
+.act {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1rem 1.5rem; padding-top: 1.6rem;
+}
+.status { margin: 0; font: 700 0.85rem/1.3 var(--mono); letter-spacing: 0.1em; }
+.status::before {
+  content: ""; display: inline-block;
+  width: 0.62rem; height: 0.62rem; margin-right: 0.6rem; vertical-align: -0.02em;
+  border: 1.5px solid currentColor;
+  transition: background 0.3s;
+}
+.status-value { display: inline-block; }
+.status-value.roll { animation: roll 0.38s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.is-accepted .status { color: var(--blue); }
+.is-accepted .status::before { background: var(--blue); }
+
+.btn {
+  padding: 1.05rem 1.6rem;
+  font: 700 0.95rem/1 var(--mono); letter-spacing: 0.14em;
+  color: var(--paper); background: var(--ink);
+  border: 1px solid var(--ink); border-radius: 0;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s, background 0.25s, color 0.25s;
+}
+.btn:hover:not(:disabled) { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--ink); }
+.btn:active:not(:disabled) { transform: translate(1px, 1px); box-shadow: 0 0 0 var(--ink); }
+.btn:focus-visible, .undo:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.btn:disabled { background: transparent; color: var(--ink); cursor: default; }
+
+/* confirmation, revealed by animating grid row height */
+.reveal {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal-in { min-height: 0; overflow: hidden; visibility: hidden; }
+.reveal-body {
+  margin-top: 1.6rem; padding-top: 1.5rem;
+  border-top: 1px solid var(--rule-soft);
+  opacity: 0; transform: translateY(6px);
+  transition: opacity 0.5s 0.3s, transform 0.5s 0.3s;
+}
+.is-accepted .reveal { grid-template-rows: 1fr; }
+.is-accepted .reveal-in { visibility: visible; }
+.is-accepted .reveal-body { opacity: 1; transform: none; }
+
+.confirm {
+  margin: 0; font: italic 400 1.7rem/1.22 var(--serif); text-wrap: balance;
+}
+.confirm::after { content: "*"; font-style: normal; color: var(--ink-soft); }
+.fine { margin: 0.7rem 0 0; font: 400 0.9rem/1.45 var(--serif); color: var(--ink-soft); }
+.fine::before { content: "* "; }
+.undo {
+  margin-top: 1.1rem; padding: 0;
+  font: 400 0.75rem/1.3 var(--mono); letter-spacing: 0.06em;
+  color: var(--ink-soft); background: none; border: 0;
+  text-decoration: underline; text-underline-offset: 3px;
+  cursor: pointer;
+}
+.undo:hover { color: var(--ink); }
+
+/* ---------- Footer ---------- */
+.foot {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem 1rem;
+  margin-top: 3rem; padding-top: 0.9rem;
+  border-top: 1px solid var(--ink);
+  font: 400 0.75rem/1.4 var(--mono); color: var(--ink-soft);
+}
+.foot span:first-child { color: var(--ink); }
+
+/* ---------- Motion ---------- */
+.rise { animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; animation-delay: calc(var(--d, 0) * 70ms); }
+.sheet.thud { animation: thud 0.26s ease-out 0.22s; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes roll { from { opacity: 0; transform: translateY(0.7em); } to { opacity: 1; transform: none; } }
+@keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(0.86); } 100% { transform: scale(1); } }
+@keyframes thud { 0% { transform: none; } 35% { transform: translateY(3px); } 65% { transform: translateY(-1px); } 100% { transform: none; } }
+@keyframes slam {
+  0%   { opacity: 0;    transform: rotate(-8deg) scale(2.2); }
+  55%  { opacity: 0.95; transform: rotate(-8deg) scale(0.93); }
+  78%  { opacity: 0.92; transform: rotate(-8deg) scale(1.03); }
+  100% { opacity: 0.9;  transform: rotate(-8deg) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 640px) {
+  .hole { display: none; }
+  .wrap::before { transform: rotate(0.4deg) translate(3px, 4px); }
+  .clause { grid-template-columns: 1fr; gap: 0.35rem; }
+  .accept { padding: 1.6rem 1.15rem 1.4rem; }
+  .sign { grid-template-columns: 1fr 7.5rem; column-gap: 1rem; }
+  .stamp .s-main { font-size: 1.4rem; }
+  .confirm { font-size: 1.45rem; }
+}
+@media (max-width: 520px) {
+  .meta { grid-template-columns: 1fr; }
+  .meta > div + div { border-left: 0; border-top: 1px solid var(--ink); }
+  .btn { width: 100%; }
+  .agree-text { font-size: 1rem; }
+}
+</style>
+
+<!-- rough ink edge for the rubber stamp -->
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <filter id="ink" x="-6%" y="-10%" width="112%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="grain"/>
+    <feDisplacementMap in="SourceGraphic" in2="grain" scale="2.4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="11" result="speck"/>
+    <feColorMatrix in="speck" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  8 0 0 0 -1.7" result="mask"/>
+    <feComposite in="rough" in2="mask" operator="in"/>
+  </filter>
+</svg>
+
+<div class="wrap">
+  <main class="sheet" id="sheet">
+    <span class="hole hole-1" aria-hidden="true"></span>
+    <span class="hole hole-2" aria-hidden="true"></span>
+    <i class="fold fold-1" aria-hidden="true"></i>
+    <i class="fold fold-2" aria-hidden="true"></i>
+
+    <header class="head rise" style="--d:0">
+      <h1>TERMS <span class="amp">&amp;</span> CONDITIONS OF FRIENDSHIP<span class="tm">™</span></h1>
+      <dl class="meta">
+        <div><dt>Document No.</dt><dd>FRIEND-2026-001</dd></div>
+        <div><dt>Last Updated</dt><dd>08 October 2026</dd></div>
+      </dl>
+    </header>
+
+    <p class="notice rise" style="--d:1">
+      PLEASE READ THESE TERMS <span class="ul">CAREFULLY<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1 6 C 14 1, 30 9, 50 4 S 84 2, 99 6"/></svg></span> BEFORE CONTINUING.
+    </p>
+
+    <section aria-label="Terms">
+      <article class="clause rise" style="--d:2">
+        <h2><span class="n">§ 01</span> — REPLYING</h2>
+        <p>You agree that leaving a message on “seen” for an unreasonable amount of time may result in friendship penalties.</p>
+      </article>
+
+      <article class="clause rise" style="--d:3">
+        <h2><span class="n">§ 02</span> — FOOD</h2>
+        <div>
+          <p>If food is purchased while your friend is present, reasonable sharing may be expected.</p>
+          <span class="note">fries count.</span>
+        </div>
+      </article>
+
+      <article class="clause rise" style="--d:4">
+        <h2><span class="n">§ 03</span> — PLANS</h2>
+        <div>
+          <p>Claiming “I’m coming” while still being at home is considered misleading information.</p>
+          <span class="note">you know who you are.</span>
+        </div>
+      </article>
+
+      <article class="clause rise" style="--d:5">
+        <h2><span class="n">§ 04</span> — MEMES</h2>
+        <p>You agree to occasionally provide memes, jokes, or other culturally significant internet material.</p>
+      </article>
+
+      <article class="clause rise" style="--d:6">
+        <h2><span class="n">§ 05</span> — BETRAYAL</h2>
+        <p>Serious betrayal may result in an immediate friendship review.</p>
+      </article>
+
+      <article class="clause rise" style="--d:7">
+        <h2><span class="n">§ 06</span> — GROUP CHAT</h2>
+        <p>Anything embarrassing sent to the group chat may become permanent historical evidence.</p>
+      </article>
+
+      <article class="clause rise" style="--d:8">
+        <h2><span class="n">§ 07</span> — EMERGENCIES</h2>
+        <p>In case of emergency, friendship takes priority over almost everything else.</p>
+      </article>
+    </section>
+
+    <form class="accept rise" id="acceptForm" style="--d:9" aria-label="Acceptance of terms" novalidate>
+      <p class="hand-note" aria-hidden="true">no pressure. (some pressure.)</p>
+
+      <div class="stamp" aria-hidden="true">
+        <span class="s-small">FRIEND-2026-001</span>
+        <span class="s-main">ACCEPTED</span>
+        <span class="s-small" id="stampDate">--</span>
+      </div>
+
+      <label class="agree">
+        <input type="checkbox" id="agree">
+        <span class="box" aria-hidden="true">
+          <svg viewBox="0 0 44 40"><path pathLength="1" d="M7 21 L16 31 C 21 20, 28 10, 40 4"/></svg>
+        </span>
+        <span class="agree-text">I HAVE READ AND ACCEPTED THESE TERMS</span>
+      </label>
+
+      <div class="sign" aria-hidden="true">
+        <div class="sig">
+          <span class="x">X</span>
+          <svg viewBox="0 0 124 44"><path pathLength="1" d="M4 34 C 10 10, 18 6, 20 20 S 14 40, 24 28 C 32 14, 36 12, 38 24 C 40 34, 46 30, 52 20 S 60 8, 62 22 C 64 34, 74 36, 84 18 L 118 14"/></svg>
+        </div>
+        <div class="sig-date"><span class="val" id="signDate"></span></div>
+        <span class="cap">Signature</span>
+        <span class="cap">Date</span>
+      </div>
+
+      <div class="act">
+        <p class="status">STATUS: <span class="status-value" id="statusValue">PENDING ACCEPTANCE</span></p>
+        <button type="submit" class="btn" id="acceptBtn">ACCEPT FRIENDSHIP</button>
+      </div>
+
+      <div class="reveal">
+        <div class="reveal-in">
+          <div class="reveal-body">
+            <p class="confirm">Congratulations. You are now officially my friend.</p>
+            <p class="fine">By clicking this button, you have made a questionable but legally meaningless decision.</p>
+            <button type="button" class="undo" id="undoBtn">Withdraw acceptance (see § 05)</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="sr-only" role="status" id="live"></p>
+    </form>
+
+    <footer class="foot rise" style="--d:10">
+      <span>Made by Haytham Bouchkara</span>
+      <span>Page 1 of 1</span>
+    </footer>
+  </main>
+</div>
+
+<script>
+// Grab the pieces of the page we need to change.
+var form = document.getElementById('acceptForm');
+var sheet = document.getElementById('sheet');
+var check = document.getElementById('agree');
+var button = document.getElementById('acceptBtn');
+var undo = document.getElementById('undoBtn');
+var statusValue = document.getElementById('statusValue');
+var signDate = document.getElementById('signDate');
+var stampDate = document.getElementById('stampDate');
+var live = document.getElementById('live');
+
+var busy = false; // true while the acceptance animation is running
+
+// Swap the status text, with a small "roll" animation.
+function setStatus(text) {
+  statusValue.textContent = text;
+  statusValue.classList.remove('roll');
+  void statusValue.offsetWidth; // restart the animation
+  statusValue.classList.add('roll');
+}
+
+// Today's date, like "08 OCT 2026".
+function today() {
+  return new Date()
+    .toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+    .toUpperCase();
+}
+
+function finishAccepting() {
+  var date = today();
+  signDate.textContent = date;
+  stampDate.textContent = date;
+
+  form.classList.add('is-accepted');          // CSS does the stamp, signature, message
+  sheet.classList.remove('thud');
+  void sheet.offsetWidth;
+  sheet.classList.add('thud');                // small thud when the stamp lands
+
+  setStatus('FRIENDSHIP ACCEPTED');
+  button.textContent = 'ACCEPTED';
+  button.disabled = true;
+  check.disabled = true;
+  live.textContent = 'Friendship accepted. Congratulations. You are now officially my friend.';
+
+  try { if (navigator.vibrate) navigator.vibrate(18); } catch (e) {}
+  busy = false;
+}
+
+// Clicking the button ticks the box (if it is not ticked yet), then accepts.
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  if (busy || form.classList.contains('is-accepted')) return;
+  busy = true;
+
+  var alreadyTicked = check.checked;
+  check.checked = true; // CSS draws the ink tick
+  setTimeout(finishAccepting, alreadyTicked ? 140 : 650);
+});
+
+// Undo, for anyone who wants to try it again.
+undo.addEventListener('click', function () {
+  form.classList.remove('is-accepted');
+  check.checked = false;
+  check.disabled = false;
+  button.disabled = false;
+  button.textContent = 'ACCEPT FRIENDSHIP';
+  setStatus('PENDING ACCEPTANCE');
+  live.textContent = 'Acceptance withdrawn.';
+  button.focus();
+});
+
+// Let the thud animation play again next time.
+sheet.addEventListener('animationend', function (event) {
+  if (event.animationName === 'thud') sheet.classList.remove('thud');
+});
+</script>
+
+</body></html>
